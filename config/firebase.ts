@@ -5,15 +5,23 @@ import { initializeApp } from "firebase/app";
 import {initializeAuth, getReactNativePersistence} from 'firebase/auth';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { getFirestore } from "firebase/firestore";
+import {
+  FIREBASE_API_KEY,
+  FIREBASE_AUTH_DOMAIN,
+  FIREBASE_PROJECT_ID,
+  FIREBASE_STORAGE_BUCKET,
+  FIREBASE_MESSAGING_SENDER_ID,
+  FIREBASE_APP_ID
+} from '@env';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCZepysoYF_7-IJBqg2HnjJjXMGwlJlgxU",
-  authDomain: "expense-tracker-de517.firebaseapp.com",
-  projectId: "expense-tracker-de517",
-  storageBucket: "expense-tracker-de517.firebasestorage.app",
-  messagingSenderId: "166180547183",
-  appId: "1:166180547183:web:e0e64f34ec164925097b9a"
+  apiKey: FIREBASE_API_KEY,
+  authDomain: FIREBASE_AUTH_DOMAIN,
+  projectId: FIREBASE_PROJECT_ID,
+  storageBucket: FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
+  appId: FIREBASE_APP_ID
 };
 
 // Initialize Firebase
